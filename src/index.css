@@ -1,0 +1,88 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+.red {
+  background-color: #F54391;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.blue {
+background-color: #61dafb;
+border-radius: 50%;
+height: 50px;
+left: 25px;
+position: relative;
+top: 25px;
+width: 50px;
+}
+
+.black {
+background-color: #000000;
+height: 100px;
+width: 100px;
+}
+.white {
+background-color: #ffffff;
+height: 50px;
+left: 25px;
+position: relative;
+top: 25px;
+width: 50px;
+}
+.title{
+  color: red;
+}
+
+.app {
+  color: red;
+  font-weight: bold;
+}
+
+.user{
+  width: 1000px;
+  height: 500px;
+  background-color: pink;
+  margin: auto;
+  text-align: center;
+}
+
+.addname{
+  color:blue;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+.img {
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: 15px;
+  border-radius: 50%;
+  /* background-image: url(../../my-reactjs/src/assets/images/duyen.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); */
+  animation: img-spin infinite 15s linear;
+}
+@keyframes img-spin {
+  from{
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg)
+  }
+}
