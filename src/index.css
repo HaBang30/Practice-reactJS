@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
-.red {
+/* .red {
   background-color: #F54391;
   border-radius: 50%;
   height: 100px;
@@ -69,20 +69,44 @@ width: 50px;
   margin-top: 100px;
   margin-left: 15px;
   border-radius: 50%;
-  /* background-image: url(../../my-reactjs/src/assets/images/duyen.png);
+  background-image: url(../../my-reactjs/src/assets/images/duyen.png);
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  transform: rotate(45deg); */
+  transform: rotate(45deg);
   animation: img-spin infinite 15s linear;
-}
-@keyframes img-spin {
+} */
+/* @keyframes img-spin {
   from{
       transform: rotate(0deg);
   }
   to {
       transform: rotate(360deg)
   }
+}  */
+
+table {
+    border-top: 3px solid black;
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+tr{
+  padding-top: 10px;
+}
+tr:nth-child(4) {
+    background-color: #ddd;
+}
+tr:nth-child(6) {
+    background-color: #ddd;
+}
+tr:nth-child(8) {
+    background-color: #ddd;
+}
+th, td {
+    border: 1px solid #dddd;
 }

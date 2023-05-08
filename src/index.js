@@ -328,14 +328,89 @@
 
 //[Bài tập] Tạo Element thể hiện thông tin của Trình duyệt bạn đang sử dụng
 
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+
+// function Iforma() {
+//   root.render(
+//     <h1>Browser'S details: {navigator.userAgent}</h1>
+//   )
+// }
+// Iforma();
+
+
+//[Exercise] Create an element that shows 
+//the student dashboard in the classroom
+
 import React from "react"
 import ReactDOM from "react-dom/client"
+import "./index.css"
+
+
+// function DashBoard() {
+//     return (
+//         <table>
+//             <tr></tr>
+//         </table>
+//     )
+// }
+
+let students = [
+    {
+        Company: "Alfreds Futterkiste",
+        contact: "Maria Anders",
+        country: "Germany"
+    },
+    {
+        Company: "Centro Comercial MocteZuma",
+        contact: "Francisco Chang",
+        country: "Mexico"
+    },
+    {
+        Company: "Emst Handei",
+        contact: "Roland Mendal",
+        country: "Austria"
+    },
+    {
+        Company: "Island Trading",
+        contact: "Helen Benett",
+        country: "UK"
+    },
+    {
+        Company: "Laughging Bacchus Winecellars",
+        contact: "Yoshi Tannamuri",
+        country: "Canada"
+    },
+    {
+        Company: "Magazzini Alimentari Riuniti",
+        contact: "Giovanni Rovelli",
+        country: "Italy"
+    }
+];
+// for(let item of students){
+//     console.log(item);
+// }
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
-
-function Iforma() {
-  root.render(
-    <h1>Browser'S details: {navigator.userAgent}</h1>
-  )
+function DrawBoard() {
+    root.render(
+       <table>
+                <h1>Students</h1>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+            {students.map(student =>
+                <tr>
+                    <td>{student.Company}</td>
+                    <td>{student.contact}</td>
+                    <td>{student.country}</td>      
+                </tr>       
+            )}  
+       </table>
+    )
 }
-Iforma();
+DrawBoard();
