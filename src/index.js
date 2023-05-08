@@ -344,73 +344,98 @@
 //[Exercise] Create an element that shows 
 //the student dashboard in the classroom
 
-import React from "react"
-import ReactDOM from "react-dom/client"
-import "./index.css"
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import "./index.css"
 
 
-// function DashBoard() {
-//     return (
-//         <table>
-//             <tr></tr>
-//         </table>
-//     )
-// }
-
-let students = [
-    {
-        Company: "Alfreds Futterkiste",
-        contact: "Maria Anders",
-        country: "Germany"
-    },
-    {
-        Company: "Centro Comercial MocteZuma",
-        contact: "Francisco Chang",
-        country: "Mexico"
-    },
-    {
-        Company: "Emst Handei",
-        contact: "Roland Mendal",
-        country: "Austria"
-    },
-    {
-        Company: "Island Trading",
-        contact: "Helen Benett",
-        country: "UK"
-    },
-    {
-        Company: "Laughging Bacchus Winecellars",
-        contact: "Yoshi Tannamuri",
-        country: "Canada"
-    },
-    {
-        Company: "Magazzini Alimentari Riuniti",
-        contact: "Giovanni Rovelli",
-        country: "Italy"
-    }
-];
+// let students = [
+//     {
+//         Company: "Alfreds Futterkiste",
+//         contact: "Maria Anders",
+//         country: "Germany"
+//     },
+//     {
+//         Company: "Centro Comercial MocteZuma",
+//         contact: "Francisco Chang",
+//         country: "Mexico"
+//     },
+//     {
+//         Company: "Emst Handei",
+//         contact: "Roland Mendal",
+//         country: "Austria"
+//     },
+//     {
+//         Company: "Island Trading",
+//         contact: "Helen Benett",
+//         country: "UK"
+//     },
+//     {
+//         Company: "Laughging Bacchus Winecellars",
+//         contact: "Yoshi Tannamuri",
+//         country: "Canada"
+//     },
+//     {
+//         Company: "Magazzini Alimentari Riuniti",
+//         contact: "Giovanni Rovelli",
+//         country: "Italy"
+//     }
+// ];
 // for(let item of students){
 //     console.log(item);
 // }
 
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+// function DrawBoard() {
+//     root.render(
+//        <table>
+//                 <h1>Students</h1>
+//                 <tr>
+//                     <th>Company</th>
+//                     <th>Contact</th>
+//                     <th>Country</th>
+//                 </tr>
+//             {students.map(student =>
+//                 <tr>
+//                     <td>{student.Company}</td>
+//                     <td>{student.contact}</td>
+//                     <td>{student.country}</td>      
+//                 </tr>       
+//             )}  
+//        </table>
+//     )
+// }
+// DrawBoard();
+
+//[Exercise] Create an element that represents the Profile Card (as shown)
+import React from "react"
+import ReactDOM from "react-dom/client"
+import "./index.css"
+
 let root = ReactDOM.createRoot(document.getElementById("root"));
-function DrawBoard() {
+
+function DrawCard() {
     root.render(
-       <table>
-                <h1>Students</h1>
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-            {students.map(student =>
-                <tr>
-                    <td>{student.Company}</td>
-                    <td>{student.contact}</td>
-                    <td>{student.country}</td>      
-                </tr>       
-            )}  
-       </table>
+        <div className="card">
+            <div className="card_head">
+
+            </div>
+            <div className="card_img_back">
+
+            </div>
+            <div className="card_img">
+                <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/330011175_591214892504735_8147581140057940848_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=e8pN2UOXROMAX--GgTQ&_nc_ht=scontent.fdad3-1.fna&oh=00_AfBefHKh4NGOtkAnz96BR_7htKYn7dRuvP-z4Pexmgv0Aw&oe=645E51CD"/>
+
+            </div>
+            <div className="card_body">
+                <h2 className="body_head">Thùy Duyên Boutique</h2>
+                <p className="body_text">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. 
+                The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et 
+                Malorum for use in a type specimen book. </p>
+                <button className="body_btn">FOLLOW</button>
+            </div>  
+        </div>
     )
+
 }
-DrawBoard();
+DrawCard();

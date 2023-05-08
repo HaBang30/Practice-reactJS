@@ -87,7 +87,7 @@ width: 50px;
   }
 }  */
 
-table {
+/* table {
     border-top: 3px solid black;
     width: 1000px;
     height: 300px;
@@ -95,9 +95,7 @@ table {
     text-align: left;
     border-collapse: collapse;
 }
-tr{
-  padding-top: 10px;
-}
+
 tr:nth-child(4) {
     background-color: #ddd;
 }
@@ -109,4 +107,65 @@ tr:nth-child(8) {
 }
 th, td {
     border: 1px solid #dddd;
+} */
+
+.card {
+    width: 400px;
+    height: 600px;
+    border: 1px solid #b1a9a9dd;
+    position: relative;
+}
+.card .card_head {
+    height: 250px;
+    background-image: url(https://images.pexels.com/photos/957061/milky-way-starry-sky-night-sky-star-957061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
+}
+.card_img_back {
+    position: absolute;
+    top: 160px;
+    left: 110px;
+    width: 180px;
+    height: 180px;
+    border: none;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #7FFF00, #FFA500, #FFFF00);
+    animation: cadr_img_back-spin infinite 1s linear;
+}
+@keyframes cadr_img_back-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.card .card_img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 175px;
+    left: 125px;
+}
+.card .card_body {
+    text-align: center;
+    margin-top: 90px;
+}
+.body_text{
+    text-align: left;
+    font-family: cursive;
+}
+.body_btn {
+  border: none;
+  background: #00BFFF;
+  width: 90px;
+  height: 40px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.body_btn:hover {
+  background: blue;
+  color: white;
+  font-weight: bolder;
 }
