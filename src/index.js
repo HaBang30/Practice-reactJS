@@ -408,34 +408,73 @@
 // DrawBoard();
 
 //[Exercise] Create an element that represents the Profile Card (as shown)
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import "./index.css"
+
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+
+// function DrawCard() {
+//     root.render(
+//         <div className="card">
+//             <div className="card_head">
+
+//             </div>
+//             <div className="card_img_back">
+
+//             </div>
+//             <div className="card_img">
+//                 <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/330011175_591214892504735_8147581140057940848_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=e8pN2UOXROMAX--GgTQ&_nc_ht=scontent.fdad3-1.fna&oh=00_AfBefHKh4NGOtkAnz96BR_7htKYn7dRuvP-z4Pexmgv0Aw&oe=645E51CD"/>
+
+//             </div>
+//             <div className="card_body">
+//                 <h2 className="body_head">Thùy Duyên Boutique</h2>
+//                 <p className="body_text">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. 
+//                 The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et 
+//                 Malorum for use in a type specimen book. </p>
+//                 <button className="body_btn">FOLLOW</button>
+//             </div>  
+//         </div>
+//     )
+
+// }
+// DrawCard();
+
+
+// npm i --save bootstrap
+
+//[Exercise] Create an Element that represents Sign in Form using Bootstrap
 import React from "react"
 import ReactDOM from "react-dom/client"
+import "bootstrap/dist/css/bootstrap.css"
 import "./index.css"
 
-let root = ReactDOM.createRoot(document.getElementById("root"));
-
-function DrawCard() {
+const root = ReactDOM.createRoot(document.getElementById("root"));
+function DrawForm() {
     root.render(
-        <div className="card">
-            <div className="card_head">
-
+        <form>
+            <div className="mb">
+                <div className="mb-img">
+                    <img src="https://th.bing.com/th/id/OIP.cyGlxOKl3wJqBj4yaza_6QAAAA?pid=ImgDet&rs=1"/>
+                </div>
+                <div className="mb-head">
+                    <h2>Please Sign In</h2>
+                </div>
+                <div classNam="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Email address</label>
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address"/>
+                </div>
+                <div className="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                </div>
+                <div className="mb-3-form-check">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                    <label className="form-check-label" for="exampleCheck1">Rememeber me</label>
+                </div>
+                <button type="submit" className="btn btn-primary">Sign in</button>
             </div>
-            <div className="card_img_back">
-
-            </div>
-            <div className="card_img">
-                <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/330011175_591214892504735_8147581140057940848_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=e8pN2UOXROMAX--GgTQ&_nc_ht=scontent.fdad3-1.fna&oh=00_AfBefHKh4NGOtkAnz96BR_7htKYn7dRuvP-z4Pexmgv0Aw&oe=645E51CD"/>
-
-            </div>
-            <div className="card_body">
-                <h2 className="body_head">Thùy Duyên Boutique</h2>
-                <p className="body_text">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. 
-                The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et 
-                Malorum for use in a type specimen book. </p>
-                <button className="body_btn">FOLLOW</button>
-            </div>  
-        </div>
+        </form>
     )
-
 }
-DrawCard();
+DrawForm();

@@ -109,7 +109,7 @@ th, td {
     border: 1px solid #dddd;
 } */
 
-.card {
+/* .card {
     width: 400px;
     height: 600px;
     border: 1px solid #b1a9a9dd;
@@ -168,4 +168,37 @@ th, td {
   background: blue;
   color: white;
   font-weight: bolder;
+} */
+
+
+
+.mb {
+  width: 300px;
+  height: 500px;
+  border: 1 px solid black;
+  margin: 0 auto;
+}
+.mb .mb-img {
+  text-align: center;
+}
+.mb .mb-img img {
+  width: 100px;
+  height: 100px;
+}
+.mb .mb-head {
+  text-align: center;
+  font-family: cursive;
+}
+.mb .mb-3-form-check {
+  text-align: center;
+}
+#exampleCheck1 {
+     margin-right: 10px;
+}
+.form-check-label {
+  font-family: cursive;
+}
+button {
+  margin-left: 110px;
+  margin-top: 20px;
 }
