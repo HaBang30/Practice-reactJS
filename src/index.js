@@ -444,37 +444,235 @@
 // npm i --save bootstrap
 
 //[Exercise] Create an Element that represents Sign in Form using Bootstrap
-import React from "react"
-import ReactDOM from "react-dom/client"
-import "bootstrap/dist/css/bootstrap.css"
-import "./index.css"
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import "bootstrap/dist/css/bootstrap.css"
+// import "./index.css"
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-function DrawForm() {
-    root.render(
-        <form>
-            <div className="mb">
-                <div className="mb-img">
-                    <img src="https://th.bing.com/th/id/OIP.cyGlxOKl3wJqBj4yaza_6QAAAA?pid=ImgDet&rs=1"/>
-                </div>
-                <div className="mb-head">
-                    <h2>Please Sign In</h2>
-                </div>
-                <div classNam="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address"/>
-                </div>
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                </div>
-                <div className="mb-3-form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                    <label className="form-check-label" for="exampleCheck1">Rememeber me</label>
-                </div>
-                <button type="submit" className="btn btn-primary">Sign in</button>
-            </div>
-        </form>
-    )
-}
-DrawForm();
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// function DrawForm() {
+//     root.render(
+//         <form>
+//             <div className="mb">
+//                 <div className="mb-img">
+//                     <img src="https://th.bing.com/th/id/OIP.cyGlxOKl3wJqBj4yaza_6QAAAA?pid=ImgDet&rs=1"/>
+//                 </div>
+//                 <div className="mb-head">
+//                     <h2>Please Sign In</h2>
+//                 </div>
+//                 <div classNam="mb-3">
+//                     <label for="exampleInputEmail1" className="form-label">Email address</label>
+//                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address"/>
+//                 </div>
+//                 <div className="mb-3">
+//                     <label for="exampleInputPassword1" class="form-label">Password</label>
+//                     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+//                 </div>
+//                 <div className="mb-3-form-check">
+//                     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+//                     <label className="form-check-label" for="exampleCheck1">Rememeber me</label>
+//                 </div>
+//                 <button type="submit" className="btn btn-primary">Sign in</button>
+//             </div>
+//         </form>
+//     )
+// }
+// DrawForm();
+
+
+
+//===================[[[[[[[]]]]]]]=====================
+//==============     react components       ============
+
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+//====[Reading] Components===
+
+// ===1. Create a New Function Component:
+// function Car() {
+//     return <h1>Hello world, I'm also a car</h1>
+// }
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Car/>)
+
+
+
+// ===2. Create a New Class Component:
+// class Car extends React.Component {
+//     render() {
+//         return <h2>Hi, i am a car</h2>
+//     }
+// }
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Car />)
+
+// ===3. Props concept (Another way to handle properties in a component is to use props.)
+// Example 1: The component is a function;
+// function Car(props) {
+//     return <h1>I am a {props.color} car</h1>
+// }
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Car color="blue"/>)
+
+// Example 2: The component is a class function
+// class Car extends React.Component {
+//     render() {
+//         return <h1>It is a {this.props.color} car</h1>
+//     }
+// }
+//  const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Car color="purple"/>);
+
+// ===4.Components in Components:
+// Example 1: 
+// class Car extends React.Component {
+//     render(){
+//         return <h2>I am a car!</h2>
+//     }
+// }
+// class Garage extends React.Component {
+//     render(){
+//         return (
+//         <div>
+//         <h1>Who live in my Garage</h1>
+//         <Car/>
+//         </div>
+//         )
+//     }
+// }
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Garage/>)
+// Example 2:
+// function Car() {
+//     return <h2>I am a supper car!</h2>
+// }
+// function Garage() {
+//     return (
+//     <div>
+//     <h1>Who live in my Garage</h1>
+//     <Car/>
+//     </div>
+//     ) 
+// }
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Garage/>)
+
+//===5.Split Components into Separate Files
+//Example 1: 
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import Car from './Car.js';
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Car />);
+
+
+
+
+//=============[Reading] Props=====================
+//  1. Use of Props: Transmit a variable
+// The way 1:
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import App from './Car.js';
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App headerProp="Header from props" contentProp ="content from props" />);
+
+
+// The way 2:
+// import React from "react"
+// import ReactDOM  from "react-dom/client"
+// import App from "./Car.js"
+
+// let headerProp = "This is Ha Bang"
+// let contentProp = "This is Bang Ha"
+
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App headerProp ={headerProp} contentProp={contentProp}/>)
+
+//=== 2.Cast an object
+//The way 1:
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import App from "./Car.js";
+
+// const article = {
+//   headerProp: "Header from props...",
+//   contentProp: "Content from props..."
+// };
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App article={article} />);
+
+//====3. Default props
+
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import App from "./Car.js"
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App/>)
+
+
+//===== 4. Authentication Props
+
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import App from "./Car.js"
+
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App/>)
+
+
+
+
+
+//=========[Reading] What pure functions mean for React Component===========================
+// Pure Function
+// Example: 
+
+// function priceAfterTax(productPrice) {
+//     return (productPrice * 0.20) + productPrice; 
+// }
+
+//Impure Function:
+// Example:
+// var tax = 20;
+// function calculateTax(productPrice) {
+//  return (productPrice * (tax/100)) + productPrice; 
+// }
+
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import Welcome from "./component/Welcome.js"
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Welcome name="Ha Bang"/>)
+
+
+
+//===========[Practice] Building Class Components
+
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import AddComponent from "./component/AddComponent";
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<AddComponent firstNumber={2} secondNumber={2}/>)
+
+//=======[Practice] Build Function component
+
+// import React from "react"
+// import ReactDOM from "react-dom/client"
+// import AddComponent from "./component/AddComponent";
+// import App from "./App.js"
+// let root  = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App/>)
+
+
+import React from "react";
+import ReactDOM from "react-dom/client"
+import Alert from "./App.js"
+
+
+let root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Alert text ="Warning! This resource does not exist!"/>)
+
+

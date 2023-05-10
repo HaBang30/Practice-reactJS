@@ -172,7 +172,7 @@ th, td {
 
 
 
-.mb {
+/* .mb {
   width: 300px;
   height: 500px;
   border: 1 px solid black;
@@ -201,4 +201,29 @@ th, td {
 button {
   margin-left: 110px;
   margin-top: 20px;
+} */
+
+/* .alert  {
+  color: red;
+} */
+
+
+.alert_warning {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 50px;
+  background: #FFFACD;
+  text-align: left;
+  line-height: 50px;
+  padding-left: 10px;
+  font-family: cursive;
+  font-size: 18px;
+}
+.alert_icon{
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.alert_text {
+  color: #b700ff;
 }
